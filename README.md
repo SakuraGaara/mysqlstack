@@ -3,12 +3,13 @@
 Docker install MySQL 5.7.23 Master and Slave.
 
 ################ INSTALL MYSQL #####################
-
+```bash
 mkdir -p ./mysql57/data ./mysql57/logs ./mysql57-slave/data ./mysql57-slave/logs
 
 sh ./mysql57/run-mysql.sh && docker logs -f mysql57
 
 sh ./mysql57-slave/run-mysql.sh && docker logs -f mysql57-slave
+```
 
 ## default mysql password is root.
 

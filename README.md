@@ -11,7 +11,7 @@ sh ./mysql57/run-mysql.sh && docker logs -f mysql57
 sh ./mysql57-slave/run-mysql.sh && docker logs -f mysql57-slave
 ```
 
-## default mysql password is root.
+ <font color="Hotpink">default mysql root password is root.</font>
 
 ################ SET Master and Slave  #####################
 

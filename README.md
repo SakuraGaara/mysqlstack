@@ -19,6 +19,7 @@ sh ./mysql57-slave/run-mysql.sh && docker logs -f mysql57-slave
 GRANT REPLICATION SLAVE ON *.* TO 'slave'@'%' IDETIFIED BY 'slave';
 
 ## slave
+```mysql
 CHANGE MASTER TO
   MASTER_HOST='hostname',
   MASTER_USER='slave',
@@ -27,21 +28,25 @@ CHANGE MASTER TO
   MASTER_AUTO_POSITION=1;
 
 START SLAVE;
-
+```
 
 ################ INSTALL PLUGIN  #####################
 
 ## master
+```mysql
 install plugin rpl_semi_sync_master soname 'semisync_master.so';
-
+```
 ## 后续添加到配置文件
+```mysql
 set global rpl_semi_sync_master_enabled=1;
 set global rpl_semi_sync_master_timeout=1000;
-
+```
 ## slave
+```mysql
 install plugin rpl_semi_sync_slave soname 'semisync_slave.so';
-
+```
 ## 后续添加到配置文件
+```mysql
 set global rpl_semi_sync_slave_enabled=1;
-
+```
 

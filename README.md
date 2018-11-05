@@ -29,7 +29,6 @@ CHANGE MASTER TO
 
 START SLAVE;
 ```
-
 ################ INSTALL PLUGIN  #####################
 
 ## master

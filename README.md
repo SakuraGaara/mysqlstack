@@ -21,7 +21,7 @@ GRANT REPLICATION SLAVE ON *.* TO 'slave'@'%' IDETIFIED BY 'slave';
 ## slave
 ```mysql
 CHANGE MASTER TO
-  MASTER_HOST='hostname',
+  MASTER_HOST='192.168.66.16',
   MASTER_USER='slave',
   MASTER_PASSWORD='slave',
   MASTER_PORT=3000,

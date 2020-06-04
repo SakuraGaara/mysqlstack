@@ -16,7 +16,9 @@ sh ./mysql57-slave/run-mysql.sh && docker logs -f mysql57-slave
 ################ SET Master and Slave  #####################
 
 ## master
+```mysql
 GRANT REPLICATION SLAVE ON *.* TO 'slave'@'%' IDETIFIED BY 'slave';
+```
 
 ## slave
 ```mysql
